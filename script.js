@@ -4,7 +4,9 @@ let isJumping = false;
 //função para pressionar a barra de espaço
 function handleKeyUp(event) {
   if (event.keyCode === 32) {
-    jump();
+    if (!isJumping) {
+      jump();
+    }
   }
 }
 
