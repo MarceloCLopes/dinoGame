@@ -1,7 +1,11 @@
+body{
+  background: #fafafa;
+}
+
 .dino{
   width: 60px;
   height: 60px;
-  background: green;
+  background-image:url(./img/dino.png);
   position: absolute;
   bottom: 0;
 }
@@ -11,5 +15,5 @@
   width: 60px;
   height: 60px;
   bottom: 0;
-  background: red;
+  background-image:url(./img/cactus.png);
 }
