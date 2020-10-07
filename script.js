@@ -50,8 +50,14 @@ function createCactus() {
 
   //movimentar o cactus para esquerda
   let leftInterval = setInterval(() => {
-    cactusPosition -= 10;
-    cactus.style.left = cactusPosition + 'px';
+    //remover o cactus 
+    if (cactusPosition < -60) {
+      clearInterval(leftInterval);
+      background.removeChild(cactus);
+    } else {
+      cactusPosition -= 10;
+      cactus.style.left = cactusPosition + 'px';
+    }
   }, 20);
 }
 
