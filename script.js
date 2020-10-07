@@ -1,4 +1,5 @@
 const dino = document.querySelector(".dino");
+let isJumping = false;
 
 //função para pressionar a barra de espaço
 function handleKeyUp(event) {
