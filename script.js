@@ -1,4 +1,5 @@
 const dino = document.querySelector(".dino");
+const background = document.querySelector(".background");
 let isJumping = false;
 
 //função para pressionar a barra de espaço
@@ -24,6 +25,7 @@ function jump() {
       let downInterval = setInterval(() => {
         if (position < 0) {
           clearInterval(downInterval);
+          isJumping = false;
         } else {
           position -= 20;
           dino.style.bottom = position + 'px';
@@ -35,6 +37,13 @@ function jump() {
       dino.style.bottom = position + 'px';
     }
   }, 20);
+}
+
+//função para criar cactos
+function createCactus() {
+  const cactus = document.createElement('div');
+
+  cactus.classList.add('cactus');
 }
 
 document.addEventListener('keyup', handleKeyUp);
