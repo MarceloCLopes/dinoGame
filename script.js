@@ -22,7 +22,7 @@ function jump() {
 
       //Descendo
       let downInterval = setInterval(() => {
-        if (position < 0) {
+        if (position <= 0) {
           clearInterval(downInterval);
           isJumping = false;
         } else {
@@ -45,7 +45,7 @@ function createCactus() {
   let randomTime = Math.random() * 6000;
 
   cactus.classList.add('cactus');
-  cactus.style.left = 1000 + 'px';
+  cactus.style.left = cactusPosition + 'px';
   background.appendChild(cactus);
 
   //movimentar o cactus para esquerda
