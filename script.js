@@ -14,6 +14,8 @@ function handleKeyUp(event) {
 function jump() {
   let position = 0;
 
+  isJumping = true;
+
   let upInterval = setInterval(() => {
     if (position >= 150) {
       clearInterval(upInterval);
